@@ -5,9 +5,10 @@
  */
 package app;
 
-import Pessoa.Pessoa;
-import dao.Dao;
-import dao.PessoaDao;
+import derby.FilmeDerby;
+import pessoa.Pessoa;
+import derby.PessoaDerby;
+import filme.Filme;
 
 /**
  *
@@ -16,10 +17,14 @@ import dao.PessoaDao;
 public class App {
     public static void main(String[] args) {
         
-        Pessoa p = new Pessoa("James", "Bruno", 22, 1);
-        PessoaDao dao = new PessoaDao();
-        p.getId();
-        dao.adicionar(p);
+        Pessoa p = new Pessoa("James", "Bruno", 25, 2);
+        Filme f = new Filme("Scarface", "Ação", 01, 5);
+        PessoaDerby derby = new PessoaDerby();
+        FilmeDerby derbyf = new FilmeDerby();
+        System.out.println(p.getId());
+        //derby.adicionar(p);
+        derbyf.adicionar(f);
+        
         
     }
     
