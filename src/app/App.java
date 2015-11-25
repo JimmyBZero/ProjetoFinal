@@ -21,9 +21,10 @@ public class App {
         Filme f = new Filme("Scarface", "Ação", 01, 5);
         PessoaDerby derby = new PessoaDerby();
         FilmeDerby derbyf = new FilmeDerby();
-        System.out.println(p.getId());
+        
         //derby.adicionar(p);
         derbyf.adicionar(f);
+        derbyf.remover(f.getNum());
         
         
     }
