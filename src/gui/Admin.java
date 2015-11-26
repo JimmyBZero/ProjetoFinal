@@ -76,6 +76,20 @@ public class Admin extends javax.swing.JFrame {
         jcBuscarSobrenome = new javax.swing.JButton();
         jcBuscarIdade = new javax.swing.JButton();
         jcBuscarId = new javax.swing.JButton();
+        jfBuscarNome = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jAlugarCliente = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jAlugarFilme = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jAlugarExemplar = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -226,6 +240,68 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
+        jfBuscarNome.setText("BUSCAR");
+        jfBuscarNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfBuscarNomeActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("BUSCAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("BUSCAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("BUSCAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("ALUGAR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("DEVOLVER");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Numero Cliente:");
+
+        jLabel7.setText("Numero Filme:");
+
+        jLabel8.setText("Numero do Exemplar:");
+
+        jButton6.setText("CHECAR CLIENTE");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("CHECAR FILME");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -248,19 +324,20 @@ public class Admin extends javax.swing.JFrame {
                             .addComponent(jcListar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jcRemover)))
-                    .addComponent(jcNome))
+                    .addComponent(jcNome)
+                    .addComponent(jInstrucoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jcBuscarNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jcBuscarSobrenome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jcBuscarIdade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jcBuscarId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(144, 144, 144)
+                            .addComponent(jcBuscarNome)
+                            .addComponent(jcBuscarSobrenome)
+                            .addComponent(jcBuscarIdade)
+                            .addComponent(jcBuscarId))
+                        .addGap(99, 99, 99)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jfGenero, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jfNum, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jfGenero, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jfNum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,10 +349,30 @@ public class Admin extends javax.swing.JFrame {
                                 .addComponent(jfListar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jfRemover))
-                            .addComponent(jfExemplares, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jInstrucoes, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(184, Short.MAX_VALUE))
+                            .addComponent(jfExemplares, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jfBuscarNome)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)
+                            .addComponent(jButton3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jAlugarExemplar, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel6)
+                                .addComponent(jAlugarFilme, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                                .addComponent(jAlugarCliente)))))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,13 +384,16 @@ public class Admin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jfBuscarNome))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(addcliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -309,12 +409,15 @@ public class Admin extends javax.swing.JFrame {
                             .addComponent(jcSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jcBuscarSobrenome))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idade)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idade)
+                            .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jcIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jcBuscarIdade)
-                            .addComponent(jfNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jfNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(id)
@@ -323,7 +426,8 @@ public class Admin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jcId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jcBuscarId)
-                            .addComponent(jfExemplares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jfExemplares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jcSalvar)
@@ -332,9 +436,33 @@ public class Admin extends javax.swing.JFrame {
                             .addComponent(jfSalvar)
                             .addComponent(jfListar)
                             .addComponent(jfRemover))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jInstrucoes, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jInstrucoes)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jAlugarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jAlugarFilme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton5)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jAlugarExemplar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -393,16 +521,22 @@ public class Admin extends javax.swing.JFrame {
     private void jInstrucoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInstrucoesActionPerformed
         System.out.println("PARA ADICIONAR UM CLIENTE, PREENCHA TODOS OS CAMPOS DE CLIENTE E PRESSIONE SALVAR.");
         System.out.println("PARA ADICIONAR UM FILME, PREENCHA TODOS OS CAMPOS DE FILME E PRESSIONE SALVAR.\n");
+        
         System.out.println("PARA REMOVER UM CLIENTE, PREENCHA O CAMPO NUMERO DE IDENTIFICAÇÃO EM CLIETE E PRESSIONE REMOVER.");
         System.out.println("PARA REMOVER UM FILME, PREENCHA O CAMPO NUMERO DE IDENTIFICAÇÃO EM FILME E PRESSIONE REMOVER.\n");
+        
         System.out.println("PARA LISTAR TODOS OS FILMES OU CLIENTES, PRESSIONE LISTAR NO SEU DEVIDO CAMPO.\n");
-        System.out.println("PARA ALUGAR UM FILME, PREENCHA AMBOS OS CAMPOS NUMERO DE IDENTIFICAÇÃO E PRESSIONE ALUGAR.");
-        System.out.println("CASO EXISTA UM EXEMPLAR DISPONÍVEL, O SISTEMA SEMPRE IRÁ ALUGAR O EXEMPLAR COM O NUMERO MAIOR.");
-        System.out.println("POR EXEMPLO, SE O EXEMPLAR DE NUMERO 3 É O EXEMPLAR DE MAIOR NÚMERO, O NUMERO 3 SERÁ ALUGADO, E ENTÃO O EXEMPLAR NUMERO 2 FICARÁ DISPONÍVEL PARA LOCAÇÃO.\n");
-        System.out.println("PARA RECEBER UM EXEMPLAR QUE UM CLIENTE ALUGOU, PREENCHA O CAMPO NUMERO DE IDENTIFICAÇÃO EM FILME E PRESSIONE DEVOVER.\n");
+        
+        System.out.println("PARA ALUGAR UM FILME, PREENCHA AMBOS OS CAMPOS NUMERO DE IDENTIFICAÇÃO, SELECIONE UM EXEMPLAR E PRESSIONE ALUGAR.");
+        System.out.println("CASO EXISTA UM EXEMPLAR DISPONÍVEL, O SISTEMA SEMPRE IRÁ ALUGAR O EXEMPLAR PARA O DEVIDO CLIENTE.\n");
+                
+        System.out.println("PARA RECEBER UM EXEMPLAR QUE UM CLIENTE ALUGOU, PREENCHA O CAMPO NUMERO DE IDENTIFICAÇÃO E EXEMPLAR EM FILME E PRESSIONE DEVOVER.\n");
         System.out.println("A FUNÇÃO CHECAR CLIENTE VERIFICA SE UM DETERMINADO CLIENTE ESTÁ COM ALGUM FILME ALUGADO.");    
         System.out.println("A FUNÇÃO CHECAR FILME VERIFICA SE UM DETERMINADO FILME ESTÁ COM ALGUM EXEMPLAR EMPRESTADO PARA ALGUM CLIENTE.");
-        System.out.println("PARA CHECAR, PREENCHA O CAMPO NUMERO DE IDENTIFICAÇÃO EM CLIENTE OU FILME, DEPOIS PRESSIONE CHECAR CLIENTE OU CHECAR FILME.\n"); 
+        System.out.println("PARA CHECAR, PREENCHA O CAMPO NUMERO DE IDENTIFICAÇÃO EM CLIENTE OU FILME, DEPOIS PRESSIONE CHECAR CLIENTE OU CHECAR FILME.\n");
+        
+        System.out.println("TODOS OS CAMPOS TEM A OPÇÃO BUSCAR, PARA LISTAR POR CAMPO, DIGITE O QUE DESEJA BUSCAR NO CAMPO E CLIQUE EM BUSCAR.");
+        System.out.println("A BUSCA DIFERENCIA ACENTOS E CARACTERES, DIGITE CORRETAMENTE!\n");
         
     }//GEN-LAST:event_jInstrucoesActionPerformed
 
@@ -421,6 +555,38 @@ public class Admin extends javax.swing.JFrame {
     private void jcBuscarIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcBuscarIdActionPerformed
         pderby.listarId(jcId.getText());
     }//GEN-LAST:event_jcBuscarIdActionPerformed
+
+    private void jfBuscarNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfBuscarNomeActionPerformed
+        fderby.listarNome(jfNome.getText());
+    }//GEN-LAST:event_jfBuscarNomeActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        fderby.listarGenero(jfGenero.getText());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        fderby.listarNum(jfNum.getText());
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        fderby.listarExemplares(jfExemplares.getText());
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        fderby.alugar(jAlugarCliente.getText(), jAlugarFilme.getText(), jAlugarExemplar.getText());
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        fderby.devolver(jAlugarFilme.getText(), jAlugarExemplar.getText());
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        pderby.checarCliente(jAlugarCliente.getText());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        fderby.checarFilme(jAlugarFilme.getText(), jAlugarExemplar.getText());
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -461,12 +627,25 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel addcliente;
     private javax.swing.JLabel id;
     private javax.swing.JLabel idade;
+    private javax.swing.JTextField jAlugarCliente;
+    private javax.swing.JTextField jAlugarExemplar;
+    private javax.swing.JTextField jAlugarFilme;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jInstrucoes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -482,6 +661,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton jcRemover;
     private javax.swing.JButton jcSalvar;
     private javax.swing.JTextField jcSobrenome;
+    private javax.swing.JButton jfBuscarNome;
     private javax.swing.JTextField jfExemplares;
     private javax.swing.JTextField jfGenero;
     private javax.swing.JButton jfListar;

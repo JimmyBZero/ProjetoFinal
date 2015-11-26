@@ -78,8 +78,8 @@ public class PessoaDerby{
             ResultSet rs = stmt.executeQuery(instrucao);
             while (rs.next()){
                 if(nome == null ? rs.getString("NOME") == null : nome.equals(rs.getString("NOME"))){
-                System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
-                       "\nId: " + rs.getString("ID") + "\n");
+                    System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
+                    "\nId: " + rs.getString("ID") + "\n");
                 }
             }
         }catch(SQLException se){
@@ -93,8 +93,8 @@ public class PessoaDerby{
             ResultSet rs = stmt.executeQuery(instrucao);
             while (rs.next()){
                 if(sobrenome == null ? rs.getString("SOBRENOME") == null : sobrenome.equals(rs.getString("SOBRENOME"))){
-                System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
-                       "\nId: " + rs.getString("ID") + "\n");
+                    System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
+                    "\nId: " + rs.getString("ID") + "\n");
                 }
             }
         }catch(SQLException se){
@@ -108,8 +108,8 @@ public class PessoaDerby{
             ResultSet rs = stmt.executeQuery(instrucao);
             while (rs.next()){
                 if(idade == null ? rs.getString("IDADE") == null : idade.equals(rs.getString("IDADE"))){
-                System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
-                       "\nId: " + rs.getString("ID") + "\n");
+                    System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
+                    "\nId: " + rs.getString("ID") + "\n");
                 }
             }
         }catch(SQLException se){
@@ -124,14 +124,26 @@ public class PessoaDerby{
             ResultSet rs = stmt.executeQuery(instrucao);
             while (rs.next()){
                 if(id == null ? rs.getString("ID") == null : id.equals(rs.getString("ID"))){
-                System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
-                       "\nId: " + rs.getString("ID") + "\n");
+                    System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
+                    "\nId: " + rs.getString("ID") + "\n");
                 }
             }
         }catch(SQLException se){
             System.out.println("Mensagem: " + se.getMessage());
         }
         
+    }
+    
+    public void checarCliente(String id){
+        String instrucao = "SELECT * FROM EXEMPLAR WHERE IDCLIENTE = " + id;
+        try{
+            ResultSet rs = stmt.executeQuery(instrucao);
+            while (rs.next()){
+                System.out.println("O CLIENTE " + id + " ESTA COM O EXEMPLAR " + rs.getString("NUMEX") + " DO FILME " + rs.getString("NUMFILME"));
+            }
+        }catch(SQLException se){
+            System.out.println("Mensagem: " + se.getMessage());
+        }
     }
     
 }

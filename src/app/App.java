@@ -22,16 +22,6 @@ public class App {
         PessoaDerby derby = new PessoaDerby();
         FilmeDerby derbyf = new FilmeDerby();
         
-        //derby.adicionar(p);
-        //derby.listarNome("James");
-        //derbyf.adicionar(f);
-        //derbyf.remover(f.getNum());
-        //derby.listarTudo();
-        //derbyf.listarTudo();
-        //derby.listarSobrenome("Bruno");
-        //derby.listarIdade("25");
-        
-        
+                      
     }
-    
 }
