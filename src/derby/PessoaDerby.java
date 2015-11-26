@@ -8,6 +8,7 @@ package derby;
 import pessoa.Pessoa;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -45,7 +46,7 @@ public class PessoaDerby{
         }
     
     public void remover(int id) {
-        String instrucao = "DELETE FROM PESSOA WHERE CODIGO = " + "" + id + "";
+        String instrucao = "DELETE FROM PESSOA WHERE ID = " + "" + id + "";
         System.out.println(instrucao);
         try{
             stmt.executeUpdate(instrucao);
@@ -54,7 +55,25 @@ public class PessoaDerby{
         }
     }
     
-    public void listarTudo(){
+    public void listarTudo() {
+        String instrucao = "SELECT * FROM PESSOA";
+        try{
+            //um select traz resultados que precisam ser armazenados.
+            //vou executar e armazenar o resultado.
+            ResultSet rs = stmt.executeQuery(instrucao);
+            
+            while (rs.next()){
+                System.out.println("Nome: " + rs.getString("NOME") + "\nSobrenome: " + rs.getString("SOBRENOME") + "\nIdade: " + rs.getString("IDADE") +
+                       "\nId: " + rs.getString("ID") + "\n");
+            }
+        }catch(SQLException se){
+            System.out.println("Mensagem: " + se.getMessage());
+        }
+        
+    }
+    
+    public void listarNome(String nome){
+        String instrucao = "SELECT FROM PESSOA WHERE NOME = " + nome;
         
     }
     

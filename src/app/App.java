@@ -23,8 +23,10 @@ public class App {
         FilmeDerby derbyf = new FilmeDerby();
         
         //derby.adicionar(p);
-        derbyf.adicionar(f);
-        derbyf.remover(f.getNum());
+        //derbyf.adicionar(f);
+        //derbyf.remover(f.getNum());
+        //derby.listarTudo();
+        //derbyf.listarTudo();
         
         
     }
